@@ -23,7 +23,7 @@ function draw() {
 
 function keyPressed() {
   // add new letter to the array
-  if (key.match(/[a-z]/i)) { // check if the key is a letter
+  if (keyCode >= 65 && keyCode <= 90) { // check if the key is a letter
     let index = key.toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
     let targetX = map(index, 0, 25, 50, width - 50);
     let targetY = height - 50 - (columns[index] * 30); // calculate targetY based on how many are already in the column
